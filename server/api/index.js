@@ -12,7 +12,7 @@ const httpServer = createServer(app)
 
 const io = require('socket.io')(httpServer,{
     cors:{
-        origin: process.env.FRONTEND_URL,
+        origin: 'https://document-editor-frontend.vercel.app/',
         methods: ["GET","POST"]
     }
 })

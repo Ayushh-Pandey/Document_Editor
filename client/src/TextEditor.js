@@ -38,7 +38,7 @@ const TextEditor = () => {
     }
 
     useEffect(() => {
-        const st = io(process.env.REACT_APP_API_URL);
+        const st = io('https://document-editor-backend.vercel.app/');
         setSocket(st);
         return () => {
             st.disconnect()

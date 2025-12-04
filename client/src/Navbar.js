@@ -37,7 +37,7 @@ const Navbar = () => {
     }
     const handleCopyClick = async () => {
         try {
-            await window.navigator.clipboard.writeText(`http://localhost:3000${url.pathname}`);
+            await window.navigator.clipboard.writeText(`https://document-editor-frontend.vercel.app/${url.pathname}`);
             alert("URL Copied to clipboard!");
         } catch (err) {
             console.error(
