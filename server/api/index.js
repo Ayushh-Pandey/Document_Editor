@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 5000;
 const cors = require('cors')
-require('dotenv').config({path:'./backend/.env'})
+require('dotenv').config({path:'./backend.env'});
 
 const Document = require('../model/Document.js')
 
