@@ -12,9 +12,9 @@ const httpServer = createServer(app)
 
 const io = require('socket.io')(httpServer,{
     cors:{
-        origin: 'https://document-editor-frontend.vercel.app/',
+        origin: process.env.FRONTEND_URL,
         methods: ["GET","POST"],
-        creadentials: true
+        credentials: true
     }
 })
 
@@ -48,6 +48,10 @@ async function findOrCreateDocument(id){
 
 const docRouter = require('../routes/DocumentRoute.js');
 const { connectDB } = require('../database/db.js');
+
+app.get('/',(req,res)=>{
+    res.send("API is running....");
+});
 
 app.use('/',docRouter);
 
